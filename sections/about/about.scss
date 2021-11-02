@@ -1,0 +1,156 @@
+.about {
+    
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        @include tabletScreen{
+            display: block;
+        }
+    }
+    &__img-block {
+        position: relative;
+
+        img {
+            display: block;
+            width: 650px;
+            height: 540px;
+
+            @include tabletScreen {
+                width: 100%;
+                height: auto;
+                margin: 0 auto;
+            }
+        }
+        span {
+            color: color(white);
+            position: absolute;
+            right: 65px;
+            top: 90%;
+            font-family: 'Tangerine', cursive;
+            font-size: 45px;
+            letter-spacing: 5px;
+
+            @include tabletScreen {
+                font-size: 65px;
+            }
+            @include ipadScreen {
+                font-size: 50px;
+            }
+            @include phoneScreen {
+                font-size: 25px;
+            }
+        }
+    }
+
+    &__company {
+        max-width: 488px;
+        color: color(white);
+        
+        @include tabletScreen{
+            max-width: 100%;
+            margin-top: 50px;
+        }
+    }
+
+    &__name-company {
+        font-weight: bold;
+        font-size: 40px;
+        text-transform: uppercase;
+        color: color(white);
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+
+        @include ipadScreen {
+            font-size: 30px;
+        }
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        color: color(white);
+        line-height: 24px;
+        margin-bottom: 18px;
+
+        @include tabletScreen {
+            line-height: 26px;
+        }
+    }
+
+    &__text-two {
+        margin-bottom: 30px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+
+        @include tabletScreen {
+            line-height: 26px;
+        }
+    }
+
+    &__sub-title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+    }
+
+    &__sub-text {
+        font-weight: 400;
+        font-size: 16px;
+        color: color(white);
+        line-height: 24px;
+
+        @include tabletScreen {
+            line-height: 26px;
+        }
+    }
+
+    &__text-bg {
+        text-align: right;
+        color: #6C6C6C;
+    }
+
+    &__text-bg-title {
+        font-size: 50px;
+        font-weight: 900;
+        letter-spacing: 10px;
+        text-align-last: right;
+        
+        @include ipadScreen {
+            font-size: 35px;
+        }
+        @include phoneScreen {
+            font-size: 25px;
+            font-weight: 400;
+        }
+    }
+
+    &__text-bg-subtitle {
+        font-weight: 900;
+        font-size: 130px;
+        color: rgba(77, 10, 79, 0.6);
+        letter-spacing: 60px;  
+
+        @include tabletScreen {
+            font-size: 105px;
+            letter-spacing: 48px;
+        }
+        @include ipadScreen {
+            font-size: 70px;
+            letter-spacing: 45px;
+        }
+        @include phoneScreen {
+            font-size: 30px;
+            letter-spacing: 24px;
+        }
+    }
+}
+
+
+
+

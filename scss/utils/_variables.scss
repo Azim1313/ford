@@ -1,0 +1,25 @@
+$colors: (
+  white: #FFF,
+  indigo: #660A68,
+  red: #700E0E,
+  star: #3E0847,
+  gradient: linear-gradient(107.23deg, #070022 0.7%, #220B34 56.83%, #000000 95.42%)
+
+);
+
+$screenWidth: (
+  tablet: 1100px,
+  ipad: 900px,
+  phone: 670px,
+  SE: 361px,
+);
+
+
+
+@function screenWidth($key) {
+    @return map-get($map: $screenWidth, $key: $key);
+}
+  
+@function color($key) {
+    @return map-get($map: $colors, $key: $key);
+}

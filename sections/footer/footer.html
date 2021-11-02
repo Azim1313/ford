@@ -1,0 +1,86 @@
+<footer class="footer">
+  <div class="wrapper">
+      <div class="footer__container">
+          <div class="footer__logo"><a href="#"><img src="./assets/images/logo.svg" alt=""></a></div>
+          <nav class="footer__menu">
+              <li class="footer__menu-list"><a href="#banner" class="footer__menu-link">Home</a></li>
+              <li class="footer__menu-list"><a href="#about" class="footer__menu-link">About Us</a></li>
+              <li class="footer__menu-list"><a href="#slider__car" class="footer__menu-link">Cars</a></li>
+              <li class="footer__menu-list"><a href="#services" class="footer__menu-link">Services</a></li>
+              <li class="footer__menu-list"><a href="#contacts" class="footer__menu-link">Contacts</a></li>
+          </nav>
+          <div class="footer__icon">
+              <a href="" class="footer__phone"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href="" class="footer__cart"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </div>
+      </div>
+  </div>
+
+    <div class="popup" id="popup__form">
+        <div class="popup__body">
+            <div class="popup__content">
+                <div class="close-popup">&times;</div>
+                <h1 class="popup__heading">Заказать звонок</h1>
+                <form action="./mail.php" method="POST" id="form" novalidate>
+                    <input type="text" placeholder="Имя" name="name">
+                    <div class="email-tel-box">
+                        <input type="email" name="email" id="user-mail" placeholder="Почта *" class="email required">
+                        <input type="tel" name="tel" id="user-phone" placeholder="Телефон">
+                    </div>
+                    <textarea name="message" id="text" placeholder="Другое описание"></textarea>
+                    <div class="checkbox-box">
+                        <input type="checkbox" id="chbox" class="required">
+                        <label for="chbox">Согласие на обработку персональных данных *</label>
+                    </div>
+                    <button type="submit" class="submit">Оставить заявку</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<!-- preloader -->
+    <div class="preloader">
+        <div class="container">
+            <div class="speedometr">
+                <div class="ris-w"></div>
+                <div class="ris-w"></div>
+                <div class="ris-w"></div>
+                <div class="ris-w"></div>
+                <div class="ris-w"></div>
+                <div class="ris-w"></div>
+                <div class="ris-w"></div>
+                <div class="ris-w"></div>
+                <div class="ris-w"></div>
+                <div class="ris-w"></div>
+                <div class="ris-w"></div>
+                
+                <div class="ris ris-o1"></div>
+                <div class="ris ris-o2"></div>
+                <div class="ris ris-o3"></div>
+                <div class="ris ris-o4"></div>
+                <div class="ris ris-o5"></div>
+                <div class="ris ris-o6"></div>
+                <div class="ris ris-o7"></div>
+                <div class="ris ris-o8"></div>
+                <div class="ris ris-o9"></div>
+                <div class="ris ris-o10"></div>
+            
+                <span class="s-0">0</span>
+                <span class="s-20">20</span>
+                <span class="s-40">40</span>
+                <span class="s-60">60</span>
+                <span class="s-80">80</span>
+                <span class="s-100">100</span>
+                <span class="s-120">120</span>
+                <span class="s-140">140</span>
+                <span class="s-160">160</span>
+                <span class="s-180">180</span>
+                <span class="s-200">200</span>
+            
+                <div class="strelka"></div>
+            </div>
+            <div class="black"></div>
+        </div>
+    </div>
+    
+</footer>

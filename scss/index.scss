@@ -1,0 +1,11 @@
+@import './utils/_variables';
+@import './utils/_mixins';
+@import './utils/_global';
+@import '../sections/header/header';
+@import '../sections/banner/banner';
+@import '../sections/about/about';
+@import '../sections/cars/cars';
+@import '../../node_modules/slick-carousel/slick/slick';
+@import '../sections/services/services';
+@import '../sections/contacts/contacts';
+@import '../sections/footer/footer';

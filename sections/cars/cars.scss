@@ -1,0 +1,193 @@
+.slider__car {
+    color: color(white);
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: -33px;
+        width: 930px;
+        height: 875px;
+        background-image: url('../assets/images/disck.png');
+
+        @include tabletScreen {
+            top: -22px;
+        }
+        @include ipadScreen {
+            top: 0;
+            height: 505px;
+        }
+        // @include phoneScreen {
+        //     height: 615px;
+        // }
+    }
+    
+    .slick-track {
+        display: flex !important;
+        justify-content: space-between;
+
+    }
+
+    .slick-list {
+        overflow: hidden;
+    }
+
+    .slider__car, .slick-dots {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .slider__car, .slick-dots li {
+        margin: 0 6px;
+    }
+
+    .slider__car, .slick-dots button {
+        font-size: 0;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 1px solid color(white);
+    }
+
+    .slider__car, .slick-dots .slick-active button {
+        background-color: color(indigo);
+        border-color: color(indigo);
+    }
+    .slider__h1 {
+        margin: 70px 0 !important;
+
+        @include ipadScreen {
+            margin: 30px 0 0 0 !important;
+        }
+        @include phoneScreen {
+            margin: 30px 0 0 0 !important;
+        }
+    }
+    .slider__item {
+        width: 100%;
+        display: flex !important;
+        justify-content: space-evenly;
+        align-items: center;
+        color: color(white);
+        margin: 50px auto 0;
+
+        // @include phoneScreen {
+        //     display: block !important;
+        // }
+
+    }
+    @media (min-width: 500px) and (max-width: 670px)   {
+        .slider__item-images img {
+            width: 400px;
+        }   
+        .slider__title {
+            font-weight: bold !important;
+            font-size: 25px !important;
+            line-height: 30px !important;
+            max-width: 300px !important;
+            margin-bottom: 5px !important;
+        }
+        .slider__text-speed {
+            font-size: 12px !important;
+            margin-bottom: 6px !important;
+        }
+        &::before {
+            height: 430px !important;
+        }
+    }
+    @media (min-width: 320px) and (max-width: 480px) {
+        .slider__item {
+            display: block !important;
+        }
+        .slider__item-images img {
+            width: 100% !important;
+        }  
+        .slider__title {
+            font-size: 35px !important;
+            line-height: 28px !important;
+        }
+        &::before {
+            height: 520px !important;
+        }
+    }
+
+
+   .slider__item-info {
+        color: color(white);
+    }
+
+   .slider__title {
+        color: color(white);
+        font-weight: bold;
+        font-size: 40px;
+        line-height:40px;
+        max-width: 300px;
+        margin-bottom: 10px;
+
+        // @include ipadScreen {
+        //     font-size: 30px;
+        //     font-weight: 600;
+        //     max-width: 220px;
+        // }
+    }
+
+   .slider__sub-title-years {
+        font-weight: normal;
+        font-size: 25px;
+
+        @include ipadScreen {
+            font-size: 20px;
+        }
+    }
+
+    .slider__item-price {
+        font-weight: bold;
+        font-size: 20px;
+        color: color(indigo);
+        margin-bottom: 50px;
+
+        @include ipadScreen {
+            margin-bottom: 20px;
+        }
+    }
+
+   .slider__text-speed {
+        margin-bottom: 12px;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        color: #887F88;
+    }
+
+   .slider__text-speed-indigo {
+        color: color(white);
+        margin-left: 10px;
+    } 
+
+    .slider__item-images {
+        height: auto;
+
+        img {
+            display: flex;
+            width: 600px;
+            height: auto;
+
+            @include ipadScreen {
+                width: 400px;
+            }
+            // @include phoneScreen {
+            //     width: 100%;
+            // }
+        }
+    }
+}
+
+
+    
+
+
+
+
+

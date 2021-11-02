@@ -1,0 +1,173 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: color(gradient);
+  background-repeat: no-repeat;
+
+  &.lock{
+    overflow: hidden;
+  }
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 1280px;
+  padding: 0 40px;
+  margin:  0 auto;
+  overflow: hidden;
+
+  @include ipadScreen {
+    padding: 0 20px;
+  }
+  @include phoneScreen {
+    padding: 0 15px;
+  }  
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid color(indigo);
+  color: color(white);
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+  &:hover {
+    background-color:color(white);
+    color: color(indigo);
+    border: 2px solid color(white);
+    transition: all 0.3s;
+  }
+
+}
+
+.button-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid color(indigo);
+  color: color(white);
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  width: 250px;
+  height: 50px;
+
+  &:hover {
+    background-color:color(white);
+    color: color(indigo);
+    border: 1px solid color(white);
+    transition: all 0.3s;
+  }
+}
+
+// .title-sections {
+//   font-weight: bold;
+//   font-size: 60px;
+//   color: color(white);
+//   letter-spacing: 2px;
+//   text-transform: uppercase;
+//   text-align: center;
+//   margin: 130px 0px 90px 0px;
+//   position: relative;
+
+//   &:after {
+//     content: '';
+//     position: absolute;
+//     top: 50%;
+//     right: 0;
+//     height: 2px;
+//     width: 430px;
+//     background-color: color(indigo);
+//   }
+
+//   &::before {
+//     content: '';
+//     position: absolute;
+//     top: 50%;
+//     left: 0;
+//     height: 2px;
+//     width: 430px;
+//     background-color: color(indigo);
+//   }
+
+//   @include ipadScreen {
+//     font-size: 50px;
+//   }
+// }
+
+.section__titles {
+  display: flex;
+  align-items: center;
+  margin: 100px 0 80px 0;
+
+  @include ipadScreen {
+    margin: 70px 0;
+  }
+  @include phoneScreen {
+    margin: 50px 0;
+  }
+}
+.line__titles {
+    height: 2px;
+    width: 100%;
+    background-color: color(indigo);
+}
+.title-sections {
+  font-weight: bold;
+  font-size: 60px;
+  color: color(white);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  text-align: center;
+  margin: 0 20px;
+
+  @include phoneScreen {
+    font-size: 35px;
+    margin: 0 10px;
+  }
+}
+
+.services__cart-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid color(indigo);
+  color: color(white);
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  width: 190px;
+  height: 45px;
+
+  &:hover {
+    background-color:color(white);
+    color: color(indigo);
+    border: 1px solid color(white);
+    transition: all 0.3s;
+  }
+}

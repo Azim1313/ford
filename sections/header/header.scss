@@ -1,0 +1,281 @@
+
+.header {
+    margin-top: 60px;
+
+    @include ipadScreen {
+        margin-top: 40px;
+    }
+
+    @include phoneScreen {
+        margin-top: 15px;
+    } 
+
+    &__items {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        width: 140px;
+        height: 70px;
+
+        @include ipadScreen {
+            order: 0;
+        } 
+        @include phoneScreen {
+            width: 100px;
+        }
+        @include SEScreen {
+            width: 90px;
+        }       
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .header__button {
+            display: none;
+        }
+
+        @include ipadScreen {
+            position: absolute;
+            top: -1100%;
+            left: 0;
+            width: 100%;
+            padding: 100px 0 1000px;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(19, 28, 8, 0.5);
+            backdrop-filter: blur(3px);
+            transition: top 0.3s;
+            z-index: 10;
+
+            @include phoneScreen {
+                padding: 70px 0 1000px;
+            }
+
+            &.active {
+                top: 0;
+                transition: top 0.3s;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 470px;
+                background-color: color(white);
+                z-index: -1;
+                transition: 0.3s;
+
+                @include phoneScreen{
+                    height: 430px;
+                }
+            }
+        }
+    }
+
+    &__menu-list {
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin-left: 50px;
+        position: relative;
+
+        &:first-child {
+            margin-left: 0;
+        }
+        
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 120%;
+            width: 0;
+            height: 1px;
+            background: color(indigo);
+            transition: 0.2s;
+        }
+
+        &:hover:after {
+            width: 100%;
+            transform: translationX(100%);
+        }
+        
+        @include ipadScreen {
+            margin: 0 0 20px 0;
+            color: black;
+        }
+    }
+    &__menu-link {
+        color: color(white);  
+
+        &:hover {
+            color: color(indigo);
+            transition: 0.2s;
+        }
+        @include ipadScreen {
+            font-size: 20px;
+            color: black;
+            font-weight: 600;
+        }
+    }
+    &__icon {
+        @include ipadScreen {
+            margin: 0 250px 0 0;
+        }
+        @include phoneScreen {
+            display: none;
+            margin: 0;
+        }
+        @include SEScreen {
+            margin: 0;
+            display: none;
+        }
+    }
+    &__phone {
+        color: color(white);
+        font-size: 22px;
+        position: relative;
+        
+        @include ipadScreen {
+            &::after {
+                content: '+7 495-333-33-33';
+                position: absolute;
+                width: 200px;
+                top: 2px;
+                font-size: 18px;
+                margin: 0 0 0 10px;
+                font-weight: 600;
+            } 
+
+            @include phoneScreen {
+                display: none;
+            } 
+        }
+        &:hover {
+            color: color(indigo);
+            transition: all 0.2s;
+        }
+    }
+    &__cart {
+        color: color(white);
+        font-size: 22px;
+        margin-left: 30px;
+
+        @include ipadScreen {
+            display: none;
+        }
+
+        &:hover {
+            color: color(indigo);
+            transition: all 0.2s;
+        }
+    }
+
+    &__mobile-menu {
+        display: none;
+    }
+    
+    @include ipadScreen {
+        
+        .header__mobile-menu {
+            display: flex;
+            width: 30px;
+            height: 19px;
+            justify-content: center;
+            align-items: center;
+            z-index: 50;
+            position: relative; 
+            order: 3;
+
+            &::before, 
+            &:after, 
+            span {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: #fff;
+                transition: all 0.3s;
+            }
+            &::before {
+                top: 0px;
+            }
+            &:after {
+                bottom: 0px;
+            }
+
+            &.active {
+
+                span {
+                    background-color: gray;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.3s;
+                }
+        
+                &::before{
+                    background-color: gray;
+                    top: 9px;
+                    transform: rotate(45deg);
+                    transition: all 0.3s;
+                }
+        
+                &::after{
+                    background-color: gray;
+                    bottom: 8px;
+                    transform: rotate(-45deg);
+                    transition: all 0.3s;
+                }
+
+                @include phoneScreen {
+                    &::before {
+                        top: 7px;
+                    }
+                    &::after {
+                        bottom: 7px;
+                    }
+                } 
+            }
+
+            @include phoneScreen {
+                height: 16px;
+                width: 22px;
+            } 
+        }
+
+        @include phoneScreen {
+            .header__button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 16px;
+                font-weight: 600;
+                background-color: rgb(196, 196, 196);
+                color: black;
+                border: 2px solid black;
+                padding: 14px 50px;
+                margin-top: 50px;
+
+                &:hover {
+                    background-color: color(indigo);
+                    border-color: color(indigo);
+                    color: color(white);
+                }
+            }
+        }    
+    }
+}

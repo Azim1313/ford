@@ -1,0 +1,364 @@
+.contacts {
+  color:color(white);
+  margin-bottom: 200px;
+
+  @include ipadScreen {
+    margin-bottom: 100px;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 60px;
+    color: color(white);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 130px 0px 90px 0px;
+    position: relative;
+
+    @include tabletScreen {
+      margin: 80px 0 80px 0;
+    }
+    @include ipadScreen {
+      margin: 50px 0;
+      font-size: 50px;
+    }
+    @include phoneScreen {
+      font-size: 35px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      height: 2px;
+      width: 380px;
+      background-color: color(indigo);
+
+      @include tabletScreen {
+        width: 280px;
+      }
+      @include ipadScreen {
+        width: 180px;
+      }
+      @include phoneScreen {
+        width: 60px;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      height: 2px;
+      width: 380px;
+      background-color: color(indigo);
+
+      @include tabletScreen {
+        width: 280px;
+      }
+      @include ipadScreen {
+        width: 180px;
+      }
+      @include phoneScreen {
+        width: 60px;
+      }
+    }
+  }  
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include ipadScreen {
+      display: block;
+    }
+  }
+
+  &__label-box {
+    margin-bottom: 10px;
+  }
+  &__label {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 10px;
+  }
+
+  .first-input {
+    width: 580px !important;
+
+    @include tabletScreen {
+      width: 500px !important;
+    }
+    @include ipadScreen {
+      width: 100% !important;
+      margin: 0 auto 30px;
+    }
+  }
+
+  &__input {
+    background: #3A0045;
+    border: 1px solid rgba(99, 61, 102, 0.43);
+    box-sizing: border-box;
+    // border-radius: 10px;
+    width: 285px;
+    height: 50px;
+    margin-bottom: 30px;
+    outline: none;
+    color: color(white);
+    padding: 10px;
+
+    @include tabletScreen {
+      width: 240px;
+    }
+    @include ipadScreen {
+      margin: 0 auto;
+      width: 350px;
+    }
+    @include phoneScreen {
+      width: 100%;
+    } 
+
+    &:focus {
+      border: 1px solid indianred;
+      background-color: indianred;
+    }
+  }
+
+  &__phone-email {
+    display: flex;
+    justify-content: space-between;
+
+    @include phoneScreen {
+      display: block;
+
+      .contacts__phone, .contacts__email {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__texrarea {
+    background: #3A0045;
+    border: 1px solid rgba(99, 61, 102, 0.43);
+    box-sizing: border-box;
+    // border-radius: 10px;
+    width: 580px;
+    height: 150px;
+    outline: none;
+    color: color(white);
+    resize: none;
+    padding: 15px;
+    
+    @include tabletScreen {
+      width: 500px;
+    }
+    @include ipadScreen {
+      width: 100%;
+    }
+
+    &:focus {
+      border: 1px solid indianred;
+      background-color: indianred;
+    }
+  }
+
+  &__form-checkbox {
+    margin: 8px 0 55px;
+    display: flex;
+    align-items: center;
+
+    @include phoneScreen {
+      margin: 8px 0 25px;
+    } 
+    
+    input {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+
+    label {
+      padding: 0 5px 0 40px;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px;
+      color: color(white);
+      cursor: pointer;
+      position: relative;
+
+      @include phoneScreen {
+        
+        font-size: 12px;
+        padding: 0 5px 0 28px;
+        line-height: 16px;
+      } 
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        border: 2px solid color(black);
+
+        @include phoneScreen {
+          top: 0px;
+          width: 20px;
+          height: 20px;
+        } 
+      }
+
+      @include phoneScreen {
+        top: 8;
+      } 
+
+      &.error{
+
+        &::before{
+          border-color: red;
+        }
+      }
+
+      &::after {
+        display: none;
+        content: "";
+        position: absolute;
+        left: 3px;
+        top: 4px;
+        width: 16.67px;
+        height: 16px;
+        background: url("../assets/images/checkbox.svg") no-repeat;
+
+        @include phoneScreen {
+          top: 2px;
+          width: 13.67px;
+        } 
+      }
+    }
+  }
+
+    input:checked + label {
+
+      &::before {
+        background-color: color(black);
+        border-color: color(black) !important;
+      }
+
+      &::after {
+        display: block;
+        z-index: 2;
+      }
+    }
+
+  &__button {
+    height: 55px;
+    background-color: #fff;
+    border: 1px solid #ffff !important;
+    color: color(indigo);
+    font-weight: 700;
+
+    &:hover {
+      border: 1px solid indianred !important;
+      background-color: indianred;
+      color: color(white);
+    }
+  }
+
+  &__map {
+    width: 600px;
+    height: 560px;
+
+    @include ipadScreen {
+      width: 100%;
+      height: 400px;
+      margin-bottom: 50px;
+    }
+    @include phoneScreen {
+      margin-bottom: 70px;
+    }
+
+    .maps {
+      border-radius: 10px;
+      width: 550px;
+
+      @include tabletScreen {
+        width: 400px;
+      }
+      @include ipadScreen {
+        width: 100%;
+        height: 400px;
+      }
+      @include phoneScreen {
+        height: 430px;
+      }
+    } 
+  }
+
+}
+
+// & {
+//   position: relative;
+//   color: color(white);
+
+//   
+
+
+
+//   &__container {
+//     
+//   }
+//   &__form {
+//   }
+//   &__name {
+//     display: flex;
+//     flex-direction: column;
+//     width: 585px;
+//   }
+
+//   .first-input {
+//     width: 585px;
+//   }
+
+//   &__label {
+//     
+//   }
+
+//   &__input {
+//     
+//   }
+  
+//   &__phone-email {
+//     display: flex;
+//   }
+//   &__phone {
+//     display: flex;
+//     flex-direction: column;
+//   }
+//   &__emaill {
+//     display: flex;
+//     flex-direction: column;
+//   }
+
+//   &__textarea {
+//     font-weight: bold;
+//     font-size: 20px;
+//     line-height: 24px;
+//   }
+//   textarea {
+//     
+//   }
+
+//   &__map {
+//     // background-image: url('../assets/images/maps.png');
+//     // display: block;
+
+//   }
+// }
